@@ -1,0 +1,18 @@
+#include <tunables/global>
+
+profile hassio-addon_kx_bridge flags=(attach_disconnected,mediate_deleted) {
+  #include <abstractions/base>
+  #include <abstractions/bash>
+  capability,
+  network,
+  file,
+  umount,
+  /bin/** rix,
+  /usr/bin/** rix,
+  /usr/local/bin/** rix,
+  /app/** rix,
+  /data/** rwk,
+  /proc/** r,
+  /sys/** r,
+  /dev/** rw,
+}

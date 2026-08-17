@@ -1,0 +1,26 @@
+name: KX-Bridge
+version: "0.1.0"
+slug: kx_bridge
+description: "Anycubic Kobra X Moonraker Bridge for OrcaSlicer"
+url: "https://github.com/markus5790/HAOS-KX-Bridge"
+arch:
+  - amd64
+  - aarch64
+startup: application
+boot: auto
+init: false
+ingress: true
+ingress_port: 7125
+ingress_stream: true
+panel_icon: mdi:printer-3d-nozzle
+panel_title: KX-Bridge
+ports:
+  7125/tcp: 7125
+  7126/tcp: 7126
+  7127/tcp: 7127
+  7128/tcp: 7128
+  7129/tcp: 7129
+  7130/tcp: 7130
+backup: hot
+stage: experimental
+image: "ghcr.io/markus5790/haos-kx-bridge"
